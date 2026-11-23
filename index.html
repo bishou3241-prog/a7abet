@@ -53,6 +53,57 @@ section{display:flex;flex-direction:column;gap:20px}
 footer{border-top:1px solid var(--line);padding-top:22px;display:flex;flex-direction:column;gap:6px;text-align:center;font-size:13px;color:#93A3C9;line-height:1.8}
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--cyan);color:#03102E;font-weight:700;padding:10px 20px;border-radius:12px;opacity:0;transition:opacity .25s;pointer-events:none}
 .toast.show{opacity:1}
+.btn-games{font-family:inherit;border:0;cursor:pointer;background:linear-gradient(90deg,#1E6BFF,#1FA2FF);color:#fff;animation:blink 1.4s ease-in-out infinite}
+.btn-games[aria-expanded="true"]{animation:none;box-shadow:0 0 24px rgba(31,140,255,.6)}
+@keyframes blink{0%,100%{opacity:1;box-shadow:0 0 28px rgba(30,107,255,.9)}50%{opacity:.55;box-shadow:0 0 0 rgba(30,107,255,0)}}
+.games{width:100%;max-width:520px;display:none;flex-direction:column;gap:18px}
+.games.open{display:flex}
+.gcard{position:relative;border-radius:24px;border:1px solid var(--line);overflow:hidden;background:#06122F}
+.gart{height:190px;display:flex;align-items:center;justify-content:center;position:relative}
+.g1 .gart{background:radial-gradient(circle at 50% 40%,#5A4410 0%,#120E05 70%)}
+.g2 .gart{background:radial-gradient(circle at 50% 40%,#0C3B9E 0%,#040C24 70%)}
+.g3 .gart{background:radial-gradient(circle at 50% 40%,#5C1414 0%,#140505 70%)}
+.gnum{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;background:#0A1C47;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px}
+.gbadge{position:absolute;top:16px;left:16px;font-size:13px;font-weight:900;letter-spacing:3px;padding:4px 14px;border-radius:999px;border:1px solid}
+.b-vip{color:#5AB2FF;border-color:#1E6BFF;background:#0A1C47}
+.b-new{color:#5AB2FF;border-color:#1E6BFF;background:#0A1C47}
+.b-live{color:#FF5A5A;border-color:#C42B2B;background:#2A0A0A}
+.ginfo{padding:14px 18px 18px;display:flex;flex-direction:column;gap:4px;text-align:center}
+.ginfo h3{margin:0;font-size:24px;font-weight:900;letter-spacing:.5px}
+.ginfo p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+.btn-play{font-family:inherit;border:0;cursor:pointer;background:var(--blue);color:#fff;font-size:20px;max-width:none}
+.btn-play:hover{background:#3A80FF}
+.flow{width:100%;max-width:520px;display:none;flex-direction:column;gap:16px;text-align:right}
+.flow.open{display:flex}
+.fhead{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.fhead b{font-size:20px;color:var(--cyan)}
+.fback{font-family:inherit;font-size:15px;font-weight:700;min-height:44px;padding:0 18px;border-radius:14px;border:1px solid var(--line);background:#06122F;color:#CFDAF5;cursor:pointer}
+.step{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;display:flex;flex-direction:column;gap:12px}
+.step-top{display:flex;align-items:center;gap:10px}
+.snum{min-width:40px;height:28px;border-radius:999px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:14px;color:#CFDAF5}
+.step h4{margin:0;font-size:20px}
+.step p{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
+.sbtn{display:flex;align-items:center;justify-content:center;min-height:52px;border-radius:16px;font-weight:900;font-size:18px;text-decoration:none}
+.s-fill{background:linear-gradient(90deg,#1E6BFF,#1FA2FF);color:#fff}
+.s-line{border:1px solid #1E6BFF;color:#5AB2FF;background:#06122F}
+.s-fill:hover{color:#fff}.s-line:hover{color:#5AB2FF;background:#0A1C47}
+.scode{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px dashed #1E6BFF;border-radius:16px;padding:12px 16px}
+.scode span{font-size:30px;font-weight:900;letter-spacing:6px;color:#3D8BFF}
+.chips{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.chip{min-height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:17px;border:1px solid}
+.c1{color:#5AB2FF;border-color:#1E6BFF;background:#06122F}
+.c2{color:#4FD18B;border-color:#1F8A55;background:#04170E}
+.c3{color:#FF6B6B;border-color:#B02A2A;background:#1C0707}
+.idrow{display:flex;gap:10px}
+.idrow input{flex:1;min-width:0;min-height:52px;border-radius:16px;border:1px solid var(--line);background:#06122F;color:#fff;font-family:inherit;font-size:18px;padding:0 16px;text-align:left;direction:ltr}
+.idrow input:focus{outline:2px solid var(--blue)}
+.idrow button{font-family:inherit;min-height:52px;padding:0 20px;border-radius:16px;border:0;background:var(--blue);color:#fff;font-weight:900;font-size:16px;cursor:pointer}
+.iderr{color:#FF7A7A;font-size:14px;display:none}
+.done{display:none;flex-direction:column;gap:10px}
+.done.show{display:flex}
+.note{font-size:13px;color:#93A3C9;text-align:center;line-height:1.7}
+.chips2{grid-template-columns:repeat(3,1fr)}
+@media (max-width:420px){.chips{grid-template-columns:1fr}}
 @keyframes load{to{width:100%}}
 @keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 @keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(31,195,255,.45)}50%{box-shadow:0 0 0 12px rgba(31,195,255,0)}}
@@ -91,6 +142,57 @@ footer{border-top:1px solid var(--line);padding-top:22px;display:flex;flex-direc
 </div>
 
 <a class="btn btn-main" href="https://refpa-65760.com/L?tag=d_6368729m_45361c_A7ABET&amp;site=6368729&amp;ad=45361" target="_blank" rel="noopener">سجّل دلوقتي في 1XBET</a>
+
+<button class="btn btn-games" type="button" id="gamesBtn" aria-expanded="false" aria-controls="games">ألعاب 1XBET</button>
+
+<div class="games" id="games">
+<div class="gcard g1">
+<div class="gart">
+<span class="gnum">01</span><span class="gbadge b-vip">VIP</span>
+<svg aria-hidden="true" width="120" height="120" viewBox="0 0 120 120"><defs><radialGradient id="ga" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#FFF1A8"/><stop offset=".5" stop-color="#E8B630"/><stop offset="1" stop-color="#8A5A08"/></radialGradient></defs><path d="M60 38c-6-6-30-8-34 20-4 26 16 46 26 46 4 0 6-2 8-2s4 2 8 2c10 0 30-20 26-46-4-28-28-26-34-20z" fill="url(#ga)"/><path d="M60 38c0-10 4-18 10-22" stroke="#5A3A06" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M66 24c8-10 22-10 26-6-6 8-18 10-26 6z" fill="#1FAF5C"/></svg>
+</div>
+<div class="ginfo"><h3>Apple of Fortune</h3><p>اختار تفاحة في كل صف واطلع لفوق، وكل صف بيزوّد المضاعف.</p></div>
+<button class="btn btn-play" type="button" data-game="Apple of Fortune">العب الآن</button>
+</div>
+
+<div class="gcard g2">
+<div class="gart">
+<span class="gnum">02</span><span class="gbadge b-new">NEW</span>
+<svg aria-hidden="true" width="120" height="120" viewBox="0 0 120 120"><defs><linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9FE4FF"/><stop offset=".5" stop-color="#2A8CFF"/><stop offset="1" stop-color="#0A2F8A"/></linearGradient></defs><path d="M30 46l14-18h32l14 18-30 50z" fill="url(#gb)" stroke="#CFF2FF" stroke-width="2"/><path d="M30 46h60M44 28l16 18 16-18M60 46v50" stroke="#CFF2FF" stroke-width="1.5" fill="none" opacity=".7"/><circle cx="22" cy="86" r="10" fill="#111"/><circle cx="98" cy="86" r="10" fill="#111"/><path d="M22 76l4-6M98 76l-4-6" stroke="#E0A030" stroke-width="2"/></svg>
+</div>
+<div class="ginfo"><h3>Gems Mines</h3><p>افتح المربعات ولمّ الجواهر وابعد عن القنابل، وتقدر تقفل وتاخد مكسبك في أي وقت.</p></div>
+<button class="btn btn-play" type="button" data-game="Gems Mines">العب الآن</button>
+</div>
+
+<div class="gcard g3">
+<div class="gart">
+<span class="gnum">03</span><span class="gbadge b-live">LIVE</span>
+<svg aria-hidden="true" width="140" height="120" viewBox="0 0 140 120"><defs><linearGradient id="gc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF5A5A"/><stop offset="1" stop-color="#8A1010"/></linearGradient></defs><path d="M14 90l8-50h20l8 50z" fill="url(#gc)" stroke="#E8B630" stroke-width="3"/><path d="M50 96l9-62h22l9 62z" fill="url(#gc)" stroke="#E8B630" stroke-width="3"/><path d="M90 90l8-50h20l8 50z" fill="url(#gc)" stroke="#E8B630" stroke-width="3"/><circle cx="70" cy="108" r="7" fill="#F5C542"/></svg>
+</div>
+<div class="ginfo"><h3>Thimbles</h3><p>الكورة بتستخبى تحت كوباية من التلاتة، وانت تخمّن مكانها.</p></div>
+<button class="btn btn-play" type="button" data-game="Thimbles">العب الآن</button>
+</div>
+<p class="note">نتايج الألعاب دي عشوائية تمامًا، ومحدش يقدر يتوقعها أو يكشفها.</p>
+</div>
+
+<div class="flow" id="flow">
+<div class="fhead"><div><span class="sub">اللعبة</span><br><b id="gameName">-</b></div><button class="fback" type="button" id="backBtn">رجوع للألعاب</button></div>
+
+<div class="step"><div class="step-top"><span class="snum">01</span><h4>سجّل في 1XBET</h4></div><p>اعمل حسابك من اللينك ده عشان يتسجل بكود A7ABET.</p><a class="sbtn s-fill" href="https://refpa-65760.com/L?tag=d_6368729m_45361c_A7ABET&amp;site=6368729&amp;ad=45361" target="_blank" rel="noopener">سجّل في 1XBET</a></div>
+
+<div class="step"><div class="step-top"><span class="snum">02</span><h4>قناة التيليجرام</h4></div><p>انضم لقناة 7ARFOSH BET عشان توصلك العروض أول بأول.</p><a class="sbtn s-line" href="https://t.me/+iiIluk8nkOg1NjU0" target="_blank" rel="noopener">انضم الآن</a></div>
+
+<div class="step"><div class="step-top"><span class="snum">03</span><h4>البروموكود</h4></div><p>اكتب الكود ده وانت بتسجل عشان تاخد البونص.</p><div class="scode"><span dir="ltr">A7ABET</span><button class="copy" type="button" id="copyBtn2">نسخ</button></div></div>
+
+<div class="step"><div class="step-top"><span class="snum">04</span><h4>الإيداع</h4></div><p>أول إيداع عشان تفعّل بونص الترحيب:</p><div class="chips"><span class="chip c1" dir="ltr">USD 10</span><span class="chip c2" dir="ltr">DZD 2500</span><span class="chip c3" dir="ltr">MAD 150</span></div></div>
+
+<div class="step"><div class="step-top"><span class="snum">05</span><h4>الـ ID الخاص بيك</h4></div><p>اكتب رقم حسابك في 1XBET عشان نتأكد إنك مسجّل بكودنا.</p>
+<div class="idrow"><label for="uid" class="sub" style="position:absolute;width:1px;height:1px;overflow:hidden">رقم الحساب</label><input id="uid" inputmode="numeric" autocomplete="off" placeholder="مثال: 1029384756"><button type="button" id="idBtn">تأكيد</button></div>
+<span class="iderr" id="idErr">اكتب رقم الحساب صح (أرقام بس، من 6 لـ 12 رقم).</span>
+<div class="done" id="done"><p>تمام! ابعتلنا الـ ID بتاعك <b dir="ltr" id="idShow" style="color:var(--cyan)"></b> على التيليجرام.</p><a class="sbtn s-fill" href="https://t.me/XBET_A7ABET" target="_blank" rel="noopener">تواصل عبر التليجرام</a></div>
+</div>
+<p class="note">نتايج الألعاب عشوائية تمامًا ومحدش يقدر يضمنها. راهن بمسؤولية.</p>
+</div>
 </section>
 
 <section>
@@ -138,6 +240,32 @@ footer{border-top:1px solid var(--line);padding-top:22px;display:flex;flex-direc
   function fallback(){
     try{var t=document.createElement('textarea');t.value='A7ABET';t.setAttribute('readonly','');t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t);show();}catch(e){}
   }
+  var c2=document.getElementById('copyBtn2');
+  c2.addEventListener('click',function(){btn.click();});
+  var gb=document.getElementById('gamesBtn'),games=document.getElementById('games'),flow=document.getElementById('flow');
+  gb.addEventListener('click',function(){
+    var open=!games.classList.contains('open')&&!flow.classList.contains('open');
+    games.classList.toggle('open',open);flow.classList.remove('open');
+    gb.setAttribute('aria-expanded',open?'true':'false');
+    if(open){games.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+  document.querySelectorAll('[data-game]').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.getElementById('gameName').textContent=b.getAttribute('data-game');
+      games.classList.remove('open');flow.classList.add('open');
+      flow.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  });
+  document.getElementById('backBtn').addEventListener('click',function(){
+    flow.classList.remove('open');games.classList.add('open');
+    games.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  document.getElementById('idBtn').addEventListener('click',function(){
+    var v=document.getElementById('uid').value.split(' ').join('').trim(),ok=/^[0-9]{6,12}$/.test(v);
+    document.getElementById('idErr').style.display=ok?'none':'block';
+    document.getElementById('done').classList.toggle('show',ok);
+    if(ok){document.getElementById('idShow').textContent=v;}
+  });
   btn.addEventListener('click',function(){
     try{
       if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText('A7ABET').then(show,fallback);}else{fallback();}
