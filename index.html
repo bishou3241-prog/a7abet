@@ -53,9 +53,14 @@ section{display:flex;flex-direction:column;gap:20px}
 footer{border-top:1px solid var(--line);padding-top:22px;display:flex;flex-direction:column;gap:6px;text-align:center;font-size:13px;color:#93A3C9;line-height:1.8}
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--cyan);color:#03102E;font-weight:700;padding:10px 20px;border-radius:12px;opacity:0;transition:opacity .25s;pointer-events:none}
 .toast.show{opacity:1}
-.btn-games{font-family:inherit;border:0;cursor:pointer;background:linear-gradient(90deg,#1E6BFF,#1FA2FF);color:#fff;animation:blink 1.4s ease-in-out infinite}
-.btn-games[aria-expanded="true"]{animation:none;box-shadow:0 0 24px rgba(31,140,255,.6)}
-@keyframes blink{0%,100%{opacity:1;box-shadow:0 0 28px rgba(30,107,255,.9)}50%{opacity:.55;box-shadow:0 0 0 rgba(30,107,255,0)}}
+.gwrap{position:relative;width:100%;max-width:560px;margin-top:10px}
+.btn-games{font-family:inherit;border:3px solid #8FE3FF;cursor:pointer;background:linear-gradient(135deg,#5AD5FF 0%,#1FA2FF 45%,#1E6BFF 100%);color:#fff;min-height:96px;max-width:none;border-radius:24px;flex-direction:column;gap:2px;padding:14px 24px;animation:blink 1.3s ease-in-out infinite;text-shadow:0 2px 6px rgba(0,20,80,.45)}
+.btn-games .gt{display:flex;align-items:center;gap:12px;font-size:30px;font-weight:900;line-height:1.2}
+.btn-games .gs{font-size:15px;font-weight:700;opacity:.9}
+.btn-games:hover{transform:scale(1.02)}
+.btn-games[aria-expanded="true"]{animation:none;box-shadow:0 0 34px rgba(31,195,255,.7)}
+.gnew{position:absolute;top:-14px;left:18px;background:#E5202E;color:#fff;font-size:13px;font-weight:900;letter-spacing:2px;padding:4px 12px;border-radius:999px;z-index:2;box-shadow:0 4px 12px rgba(0,0,0,.4)}
+@keyframes blink{0%,100%{filter:brightness(1);box-shadow:0 0 40px 6px rgba(31,195,255,.9)}50%{filter:brightness(.7);box-shadow:0 0 0 0 rgba(31,195,255,0)}}
 .games{width:100%;max-width:520px;display:none;flex-direction:column;gap:18px}
 .games.open{display:flex}
 .gcard{position:relative;border-radius:24px;border:1px solid var(--line);overflow:hidden;background:#06122F}
@@ -143,7 +148,13 @@ footer{border-top:1px solid var(--line);padding-top:22px;display:flex;flex-direc
 
 <a class="btn btn-main" href="https://refpa-65760.com/L?tag=d_6368729m_45361c_A7ABET&amp;site=6368729&amp;ad=45361" target="_blank" rel="noopener">سجّل دلوقتي في 1XBET</a>
 
-<button class="btn btn-games" type="button" id="gamesBtn" aria-expanded="false" aria-controls="games">ألعاب 1XBET</button>
+<div class="gwrap">
+<span class="gnew">NEW</span>
+<button class="btn btn-games" type="button" id="gamesBtn" aria-expanded="false" aria-controls="games">
+<span class="gt"><svg aria-hidden="true" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r="1" fill="currentColor"/><circle cx="18" cy="13.5" r="1" fill="currentColor"/></svg>ألعاب 1XBET</span>
+<span class="gs">اضغط هنا وشوف الألعاب</span>
+</button>
+</div>
 
 <div class="games" id="games">
 <div class="gcard g1">
